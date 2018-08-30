@@ -1,6 +1,6 @@
-#Logs Analysis Project - Udacity Full Stack Web Developer Nanodegree
+# Logs Analysis Project - Udacity Full Stack Web Developer Nanodegree
  
-#Project Overview:
+# Project Overview:
 Your task is to create a reporting tool that prints out reports (in plain text) based on the data in the database. This reporting tool is a Python program using the psycopg2 module to connect to the database.
 
 So what are we reporting, anyway?
@@ -30,27 +30,30 @@ This is a python module that uses information of large database of a web server 
 ### Creating views:
 creating view for question3("On which day did more than 1% of request lead to error?)
 
-create view logs as
+"""create view logs as
 select to_char(time,'Mon dd,yyyy')as date,count(*) as logcount from log
-group by date;
+group by date;"""
 
 View "public.logs"
+"""
   Column  |  Type  | Modifiers 
 ----------+--------+-----------
  date     | text   | 
  logcount | bigint | 
+"""
 
-create view errorlogs as 
+"""create view errorlogs as 
 Select to_char(time,'Mon dd,yyyy')as date,count(*) as errorcount from log
 where status='404 NOT FOUND'
-group by date;
+group by date;"""
  
 View "public.errorlogs"
-   Column   |  Type  | Modifiers 
+"""
+Column   |  Type  | Modifiers 
 ------------+--------+-----------
  date       | text   | 
  errorcount | bigint | 
-
+"""
 
 
 ###How to run this code:
@@ -64,8 +67,8 @@ or for ubuntu type this command: sudo apt-get install virtual box
 
 3.Download and install Vagrant (if you do not already have it installed). This is the software that configures the VM and allows the host (your machine) to talk to the VM:
 -->https://www.vagrantup.com/
-or for ubuntu type this commnad: sudo apt-get install vagrant
-->you should be able to run $ vagrant --version after installation to see the version that was installed.
+or for ubuntu type this commnad: 'sudo apt-get install vagrant'
+->you should be able to run $ 'vagrant --version' after installation to see the version that was installed.
 
 4.Download and unzip this file:https://s3.amazonaws.com/video.udacity-data.com/topher/2018/April/5acfbfa3_fsnd-virtual-machine/fsnd-virtual-machine.zip  This will give you a directory called FSND-Virtual-Machine. It may be located inside your Downloads folder.
 
@@ -75,9 +78,9 @@ Alternately, you can use Github to fork and clone the repository https://github.
 
 6.cd into the vagrant/ subdirectory
 
-7.Bring the VM up with the command vagrant up
+7.Bring the VM up with the command 'vagrant up'
 
-8.Log into the VM with vagrant ssh
+8.Log into the VM with 'vagrant ssh'
 
 #Download the news data and run the commands to populate the database:
 1.Download the news data from here:
