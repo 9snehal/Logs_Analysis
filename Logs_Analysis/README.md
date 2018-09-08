@@ -109,4 +109,6 @@ vagrant@vagrant:/vagrant$ python log_analysis.py
 
 7.The program's output will be displayed in the terminal window.
 
+8.You can see the output of log_analysis file in log_analysis_output.txt file.
+
 
